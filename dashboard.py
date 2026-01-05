@@ -3,9 +3,9 @@ import pandas as pd
 import psycopg2
 import plotly.express as px
 from datetime import datetime, timedelta
-
-st.set_page_config(page_title="Föli Bus Analytics", page_icon="🚨", layout="wide")
-# Custom CSS 
+#
+st.set_page_config(page_title="Föli Bus Analytics", page_icon="🚨",  layout="wide")
+# Custom CSS    
 st.markdown("""
     <style>
         .stApp {
@@ -27,7 +27,7 @@ st.markdown("""
 @st.cache_resource
 def init_connection():
     return psycopg2.connect(
-        user="postgres", password="yam@110##", host="localhost", port="5432", database="new_db"
+        user="postgres", password = "yam%40110%23%23", host="localhost", port="5432", database="new_db"
     )
 
 @st.cache_data
