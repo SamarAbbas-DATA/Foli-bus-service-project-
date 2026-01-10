@@ -10,6 +10,7 @@ A Streamlit app (`dashboard.py`) then reads from Postgres to visualize delays, t
 - Line chart of **DelaySecs** grouped by **BusNo + BusName**.
 - Because a **BusName + LineRef** can appear multiple times, we plot the **average DelaySecs** for clean trend lines.
 - Helps spot which buses are consistently running behind.
+
 ![alt text](image.png)
 
 ---
@@ -18,6 +19,7 @@ A Streamlit app (`dashboard.py`) then reads from Postgres to visualize delays, t
 - **Bar chart by selected date**: shows **which line(s)** were late on that date.
 - **Weekly bar chart (last 7 days)**: DelaySecs trend across the past week for the selected date range.
 - Includes a **raw table sorted by DelaySecs** so you can quickly find the worst offenders.
+
 ![alt text](image-1.png)
 
 ---
@@ -25,6 +27,7 @@ A Streamlit app (`dashboard.py`) then reads from Postgres to visualize delays, t
 ### 3) Historical Comparison (Multiple Buses)
 - Historical view of delays across time.
 - Pick **multiple buses** via a multiselect filter to compare trends side-by-side.
+
 ![alt text](image-2.png)
 
 ---
@@ -34,6 +37,7 @@ A Streamlit app (`dashboard.py`) then reads from Postgres to visualize delays, t
 - Includes:
   - A **bar chart** of the top delay-heavy stops
   - A **raw table** for full detail
+
 ![alt text](image-3.png)
 
 ---
@@ -65,7 +69,4 @@ A Streamlit app (`dashboard.py`) then reads from Postgres to visualize delays, t
 ├─ dashboard.py                # Streamlit app: charts + tables from Postgres
 ├─ docker-compose.yaml         # Local services (typically Postgres / Airflow stack)
 ├─ requirements.txt            # Python dependencies
-├─ .env                        # Local environment variables (DB creds, API config)
-├─ .streamlit/
-│  └─ secrets.toml             # Streamlit secrets (optional, for local config)
 └─ logs/                       # Run logs
